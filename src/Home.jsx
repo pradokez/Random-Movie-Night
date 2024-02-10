@@ -42,7 +42,9 @@ function Home() {
 
       try {
         const response = await axios.request(options);
-        console.log(response.data);
+        const movies = response.data.results
+        const randomMovieIndex = RandomizeOption(response.data.results.length)
+        console.log(movies[randomMovieIndex])
       } catch (error) {
         console.error(error);
       }
