@@ -1,6 +1,8 @@
 import './App.css';
 import axios from 'axios';
-import  {useEffect } from "react";
+import  {useEffect, useState } from "react";
+import MoviePage from './components/MoviePage';
+import Home from './components/Home';
 
 function RandomizeOption(length){
   return Math.floor(Math.random() * length);
@@ -20,7 +22,9 @@ const RANDOM_PAGE = randomPage();
 const streamings = ['netflix', 'prime', 'starz', 'hbo', 'disney'];
 
 
-function Home() {
+function App() {
+  const [homePage, setHomePage] = useState(true)
+  const [movie, setMovie] = useState();
 
   useEffect(() => {
     const movieFetch = async () => {
@@ -42,7 +46,9 @@ function Home() {
 
       try {
         const response = await axios.request(options);
-        console.log(response.data);
+        const movies = response.data.results
+        const randomMovieIndex = RandomizeOption(response.data.results.length)
+        setMovie(movies[randomMovieIndex])
       } catch (error) {
         console.error(error);
       }
@@ -54,10 +60,15 @@ function Home() {
 
   return (
     <>
-    <h1>random movie night</h1>
-    <button onClick={()=>{}}>start</button>
+    {homePage
+    ? (<Home
+    handleClick={()=>setHomePage(false)}
+    />)
+    : (<MoviePage
+    movie={movie}
+    />)}
     </>
   )
 }
 
-export default Home;
+export default App;
