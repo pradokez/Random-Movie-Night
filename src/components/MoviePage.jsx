@@ -1,4 +1,9 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+
+MoviePage.propTypes = {
+   movie: PropTypes.object.isRequired,
+};
+
 const MoviePage = ({movie}) => {
     const banner = movie.posterURLs.original;
     return (
