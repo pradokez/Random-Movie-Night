@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #E7E2D6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-family: 'DM Serif Display';
+}
+
+button {
+  font-family: 'Montserrat';
+  background-color: transparent;
+  color: #F8F3F3;
+  border-color: #FF8707;
+  border-radius: 14px;
+  padding: 0.3rem 1.7rem;
+  cursor: pointer;
+  border-style: solid;
+  margin: 9rem 0;
+}
+
+button:hover{
+  background-color: #FF8707;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5rem;
+
+  > .first-line {
+    font-size: 2.8rem;
+  }
+
+  > .second-line {
+    font-size: 6rem;
+  }
+}
+
