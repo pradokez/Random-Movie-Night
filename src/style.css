@@ -52,3 +52,28 @@ button:hover{
   }
 }
 
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > h1 {
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #FF8707;
+    border-radius: 14px;
+    padding: 0.4rem 4.5rem;
+    font-size: x-large;
+    margin: 2rem 0 1rem 0;
+  }
+
+  > p {
+    font-family: 'Montserrat';
+    width: 60vw;
+    text-align: center;
+    font-size: medium;
+  }
+
+}
+
