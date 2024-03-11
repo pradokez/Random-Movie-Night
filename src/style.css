@@ -13,8 +13,10 @@
 
 .wrapper{
   display: flex;
-  justify-content: center;
+  height: 100vh;
+  gap: 14rem;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 
   > .ellipse {
@@ -39,13 +41,14 @@ h1, h2 {
 button {
   font-family: 'Montserrat';
   background-color: transparent;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #F8F3F3;
   border-color: #FF8707;
-  border-radius: 14px;
-  padding: 0.3rem 1.7rem;
+  border-radius: 16px;
+  padding: 0.5rem 3.4rem;
   cursor: pointer;
   border-style: solid;
-  margin: 9rem 0;
 }
 
 button:hover{
@@ -55,15 +58,15 @@ button:hover{
 .title {
   display: flex;
   flex-direction: column;
-  line-height: 3rem;
-  margin-top: 2rem;
+  line-height: 3.5rem;
+  margin-top: 12rem;
 
   > .first-line {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   > .second-line {
-    font-size: 8.2rem;
+    font-size: 10.2rem;
   }
 }
 
