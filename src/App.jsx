@@ -1,4 +1,3 @@
-import './App.css';
 import axios from 'axios';
 import  {useEffect, useState } from "react";
 import MoviePage from './components/MoviePage';
@@ -19,7 +18,7 @@ function randomPage(){
 }
 
 const RANDOM_PAGE = randomPage();
-const streamings = ['netflix', 'prime', 'starz', 'hbo', 'disney'];
+const streamings = ['netflix', 'prime', 'hbo', 'disney'];
 
 
 function App() {
