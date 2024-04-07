@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 const MoviePage = ({movie}) => {
-    console.log(movie)
+    // console.log(movie)
     const banner = movie.posterURLs[342];
     const streamingInfoArray = Object.entries(movie.streamingInfo);
     const streaming = streamingInfoArray[0][0];
