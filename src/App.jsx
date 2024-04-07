@@ -18,7 +18,7 @@ function randomPage(){
 }
 
 const RANDOM_PAGE = randomPage();
-const streamings = ['netflix', 'prime', 'starz', 'hbo', 'disney'];
+const streamings = ['netflix', 'prime', 'hbo', 'disney'];
 
 
 function App() {
