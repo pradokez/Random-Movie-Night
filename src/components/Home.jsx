@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 const Home = ({handleClick}) => {
     return (
     <div className="wrapper">
@@ -7,6 +7,10 @@ const Home = ({handleClick}) => {
       <div className="ellipse"/>
     </div>
     )
+}
+
+Home.propTypes = {
+  handleClick: PropTypes.func,
 }
 
 export default Home;

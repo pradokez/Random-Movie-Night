@@ -1,5 +1,5 @@
 import axios from 'axios';
-import  { useState } from "react";
+import  { Fragment, useState } from "react";
 import MoviePage from './components/MoviePage';
 import Home from './components/Home';
 import LoadingScreen from './components/LoadingScreen';
@@ -60,11 +60,11 @@ function App() {
   }
 
   return (
-    <>
+    <Fragment>
     {!started && (<Home handleClick={()=>handleStartClick()}/>)}
     {started && isLoading && (<LoadingScreen/>)}
     {started && !isLoading && (<MoviePage movie={movie}/>)}
-    </>
+    </Fragment>
   )
 }
 
