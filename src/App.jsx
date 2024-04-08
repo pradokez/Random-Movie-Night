@@ -1,5 +1,5 @@
 import axios from 'axios';
-import  {useEffect, useState } from "react";
+import  { useState } from "react";
 import MoviePage from './components/MoviePage';
 import Home from './components/Home';
 import LoadingScreen from './components/LoadingScreen';
@@ -59,13 +59,11 @@ function App() {
     setStarted(true);
   }
 
-  console.log(started)
-
   return (
     <>
     {!started && (<Home handleClick={()=>handleStartClick()}/>)}
-    {started && isLoading (<LoadingScreen/>)}
-    {/* {started && (<MoviePage movie={movie}/>)} */}
+    {started && isLoading && (<LoadingScreen/>)}
+    {started && !isLoading && (<MoviePage movie={movie}/>)}
     </>
   )
 }
