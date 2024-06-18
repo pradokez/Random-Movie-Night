@@ -7,18 +7,29 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  width: 100vw;
 }
 
 .wrapper{
   display: flex;
-  gap: 14rem;
+  gap: 20rem;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 20%;
+
+  @media (max-width: 875px) {
+    gap: 10rem;
+    padding-bottom: 45%;
+  }
+
+  @media (max-width: 425px) {
+    padding-bottom: 50%;
+  }
 
   > .ellipse {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 40rem;
     height: 20rem;
@@ -61,10 +72,28 @@ button:hover{
 
   > .first-line {
     font-size: 5rem;
+    @media (max-width: 875px) {
+      line-height: 1rem;
+      text-align: center;
+      padding-right: 97px;
+    }
+    @media (max-width: 425px) {
+      font-size: 3.4rem;
+      line-height: 1rem;
+      padding-right: 77px;
+    }
   }
 
   > .second-line {
     font-size: 10.2rem;
+    @media (max-width: 875px) {
+      line-height: 7.5rem;
+      text-align: center;
+    }
+    @media (max-width: 425px) {
+      font-size: 6.2rem;
+      line-height: 4.4rem;
+    }
   }
 }
 
@@ -79,9 +108,19 @@ button:hover{
     border-style: solid;
     border-color: #FF8707;
     border-radius: 14px;
-    padding: 0.4rem 4.5rem;
+    padding: 0.3rem 3%;
     font-size: x-large;
     margin: 2rem 0 1rem 0;
+
+    a {
+      text-decoration: none;
+      color:#000000;
+      cursor: pointer;
+
+      &:hover{
+        color: #FF8707;
+      }
+    }
   }
 
   > p {
@@ -102,7 +141,7 @@ button:hover{
 }
 
 .semi-ellipse-top {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: -20rem;
   width: 40rem;
@@ -113,10 +152,15 @@ button:hover{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   filter: blur(27.5px);
   z-index: -1;
+
+  @media (max-width: 875px) {
+    bottom: -60px;
+    left: -25rem;
+  }
 }
 
 .semi-ellipse-bottom {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -10rem;
   transform: rotate(270deg);
@@ -129,6 +173,10 @@ button:hover{
   filter: blur(27.5px);
   z-index: -1;
 
+  @media (max-width: 875px) {
+    top: -150px;
+    right: -15rem;
+  }
 }
 
 .loader-container {
