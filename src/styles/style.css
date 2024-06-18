@@ -103,6 +103,11 @@ button:hover{
   justify-content: center;
   align-items: center;
 
+  .streaming-logo {
+   margin: 10px; 
+   z-index: 3;
+  }
+
   > h1 {
     border-width: 2.5px;
     border-style: solid;
