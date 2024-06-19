@@ -3,12 +3,16 @@
 
 html {
   background-color: #E7E2D6;
+  padding: 5%;
+  height: 100%;
+}
+
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100vw;
+  margin: auto 0;
 }
 
 .wrapper{
@@ -103,11 +107,6 @@ button:hover{
   justify-content: center;
   align-items: center;
 
-  .streaming-logo {
-   margin: 10px; 
-   z-index: 3;
-  }
-
   > h1 {
     border-width: 2.5px;
     border-style: solid;
@@ -135,13 +134,24 @@ button:hover{
     font-size: medium;
   }
 
-  > .movie-banner {
-    width: 342px;
-    height: 509px;
-    background: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  .movie-banner-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .movie-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .streaming-logo {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    width: 50px;
+    height: auto;
   }
 }
 
@@ -185,6 +195,7 @@ button:hover{
 }
 
 .loader-container {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
