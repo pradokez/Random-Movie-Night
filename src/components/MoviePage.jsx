@@ -11,10 +11,13 @@ const MoviePage = ({movie}) => {
     return (
         <Fragment>
         <div className="movie-info">
-            <div className='movie-banner' style={{backgroundImage: `url(${banner})`,}}>
-            <a href={movieUrl} target="_blank" rel="noopener noreferrer"><img className="streaming-logo" src={`/icon-${streaming}.svg`}/></a>
+            <div className='movie-banner-container'>
+                <img className='movie-banner' src={banner}/>
+                <a className='streaming-logo' href={movieUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={`/icon-${streaming}.svg`}/>
+                </a>
             </div>
-            <h1><a href={movieUrl} target="_blank" rel="noopener noreferrer">{`${originalTitle} (${year})`}</a></h1>
+            <h1>{`${originalTitle} (${year})`}</h1>
             <p>{overview}</p>
         </div>
         <div className="semi-ellipse-top"/>
